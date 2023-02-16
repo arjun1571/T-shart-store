@@ -22,9 +22,9 @@ const Home = () => {
     const remove = cart.filter(ds => ds._id !== data._id)
     setCart(remove)
    }
-   const [house,setHouse]=useState([1]);
+   
     return (
-        <RingContext.Provider value={[house,setHouse]}>
+        <RingContext.Provider value={[cart]}>
             <div className='home-container'>
             <div className='product-container'>
                     {

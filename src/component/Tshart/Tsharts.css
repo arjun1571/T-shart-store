@@ -1,0 +1,16 @@
+.single-cart{
+    border: 2px solid gray;
+    padding: 20px;
+    border-radius: 10px;
+}
+.single-cart img{
+    height: 250px;
+
+}
+.single-cart button {
+    padding: 10px;
+    background-color: purple;
+    border-radius: 5px;
+    color: whitesmoke;
+    border: none;
+}

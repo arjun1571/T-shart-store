@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { createContext, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Cart from '../Cart/Cart';
 import Tshart from '../Tshart/Tshart';
 import "./Home.css"
 
+export const RingContext = createContext("hi i am contaxt")
 const Home = () => {
     const data = useLoaderData();
     const [cart,setCart]=useState([]);
@@ -21,8 +22,10 @@ const Home = () => {
     const remove = cart.filter(ds => ds._id !== data._id)
     setCart(remove)
    }
+   const [house,setHouse]=useState([1]);
     return (
-        <div className='home-container'>
+        <RingContext.Provider value={[house,setHouse]}>
+            <div className='home-container'>
             <div className='product-container'>
                     {
                         data.map(product => <Tshart handleAddedPorduct={handleAddedPorduct}  key={product._id} product={product} ></Tshart>)
@@ -33,6 +36,7 @@ const Home = () => {
                     
             </div>
         </div>
+        </RingContext.Provider>
     );
 };
 

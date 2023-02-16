@@ -7,6 +7,7 @@ import Main from './layout/Main';
 import Home from "./component/Home/Home"
 import Order from './component/Order/Order';
 import About from './component/About/About';
+import Grandpa from './component/Grandpa/Grandpa';
 
 function App() {
 
@@ -29,6 +30,10 @@ function App() {
         {
           path:"/about",
           element: <About></About>
+        },
+        {
+          path:"/grandpa",
+          element: <Grandpa></Grandpa>
         },
       ]
     },
